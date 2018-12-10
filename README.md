@@ -10,7 +10,7 @@ A website that allows the users to comment, view and browse through the blog web
 
 ### Project Structure
 
-![Capstone] (./../img/Capstone.jpg)
+![Capstone] (Capstone.jpg)
  
 
 ## Setup/Installation Requirements
