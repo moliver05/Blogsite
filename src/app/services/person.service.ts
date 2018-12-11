@@ -22,6 +22,7 @@ export class PersonService {
   getPersonbyId(personId: string) {
     return this.database.object('persons/' + personId);
   }
+  
   updatePerson(localUpdatedPerson) {
     var personEntryInFirebase = this.getPersonbyId(localUpdatedPerson.$key);
     personEntryInFirebase.update({

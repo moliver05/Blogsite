@@ -11,20 +11,24 @@ export class PostService {
     this.posts = database.list('posts');
   }
   
-  addAlbum(newPerson: Person) {
-    this.persons.push(newPerson);
+  addPost(newPost: Post) {
+    this.posts.push(newPost);
   }
 
-  updateAlbum(localUpdatedAlbum) {
-    var albumEntryInFirebase = this.getPersonbyId(localUpdatedAlbum.$key);
-    albumEntryInFirebase.update({
-      title: localUpdatedAlbum.title,
-      artist: localUpdatedAlbum.artist,
-      description: localUpdatedAlbum.description
+  getPostbyId(personId: string) {
+    return this.database.object('persons/' + personId);
+  }
+  
+
+  updatePost(localUpdatedPost) {
+    var postEntryInFirebase = this.getPostbyId(localUpdatedPost.$key);
+    postEntryInFirebase.update({
+      name: localUpdatedPost.name,
+      description: localUpdatedPost.description
     });
   }
   deleteAlbum(localAlbumToDelete) {
-    var albumEntryInFirebase = this.getPersonbyId(localAlbumToDelete.$key);
+    var albumEntryInFirebase = this.getPostbyId(localAlbumToDelete.$key);
     albumEntryInFirebase.remove();
   }
 }
