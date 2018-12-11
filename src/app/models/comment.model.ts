@@ -1,3 +1,4 @@
 export class Comment {
-    constructor (public name: string, public description: string, public like: number) {}
+    public likes: number = 0;
+    constructor (public name: string, public description: string) {}
 } 

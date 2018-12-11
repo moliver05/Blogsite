@@ -4,19 +4,34 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 import { AppRoutingModule } from './app-routing.module';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { masterFirebaseConfig } from './api_keys';
+
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
 import { StoryFeedComponent } from './story-feed/story-feed.component';
 import { PhotolioComponent } from './photolio/photolio.component';
+import { CommentLikeComponent } from './comment-like/comment-like.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+   
     ProfileComponent,
     StoryFeedComponent,
-    PhotolioComponent
+    PhotolioComponent,
+    CommentLikeComponent,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +40,8 @@ import { PhotolioComponent } from './photolio/photolio.component';
     FormsModule,
     HttpModule,
     routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

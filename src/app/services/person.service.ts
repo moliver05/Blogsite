@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Person } from './models/person.model';
+import { Person } from '../models/person.model';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 
@@ -15,23 +15,25 @@ export class PersonService {
   getPerson() {
     return this.persons;
   }
-  addAlbum(newPerson: Person) {
+  addPerson(newPerson: Person) {
     this.persons.push(newPerson);
   }
 
-  getPersonbyId(albumId: string) {
-    return this.database.object('albums/' + albumId);
+  getPersonbyId(personId: string) {
+    return this.database.object('persons/' + personId);
   }
-  updateAlbum(localUpdatedAlbum) {
-    var albumEntryInFirebase = this.getPersonbyId(localUpdatedAlbum.$key);
-    albumEntryInFirebase.update({
-      title: localUpdatedAlbum.title,
-      artist: localUpdatedAlbum.artist,
-      description: localUpdatedAlbum.description
+  updatePerson(localUpdatedPerson) {
+    var personEntryInFirebase = this.getPersonbyId(localUpdatedPerson.$key);
+    personEntryInFirebase.update({
+      name: localUpdatedPerson.name,
+      location: localUpdatedPerson.location,
+      description: localUpdatedPerson.description,
+      career: localUpdatedPerson.career,
+      biography: localUpdatedPerson.biography
     });
   }
-  deleteAlbum(localAlbumToDelete) {
-    var albumEntryInFirebase = this.getPersonbyId(localAlbumToDelete.$key);
-    albumEntryInFirebase.remove();
+  deletePerson(localPersonToDelete) {
+    var personEntryInFirebase = this.getPersonbyId(localPersonToDelete.$key);
+    personEntryInFirebase.remove();
   }
 }
