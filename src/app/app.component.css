@@ -1,0 +1,17 @@
+.topnav {
+    font-family: 'Franklin Gothic Medium';
+    text-decoration: none;
+    font-size: 18px; 
+    background-color:indigo;
+    padding: 15px 20px;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 2px dotted rgb(235, 224, 243);
+    font-weight: bolder;
+  }
+  
+  .topnav a{
+   text-decoration: none;
+   color: rgb(224, 224, 224);
+  }

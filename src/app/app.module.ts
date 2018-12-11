@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
+import { StoryFeedComponent } from './story-feed/story-feed.component';
+import { PhotolioComponent } from './photolio/photolio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ProfileComponent
+    ProfileComponent,
+    StoryFeedComponent,
+    PhotolioComponent
   ],
   imports: [
     BrowserModule,
