@@ -4,24 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 import { AppRoutingModule } from './app-routing.module';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireModule } from 'angularfire2';
-import { masterFirebaseConfig } from './api_keys';
+// import { AngularFireDatabaseModule } from 'angularfire2/database';
+// import { AngularFireModule } from 'angularfire2';
+// import { masterFirebaseConfig } from './api_keys';
 
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { StoryFeedComponent } from './story-feed/story-feed.component';
 import { PhotolioComponent } from './photolio/photolio.component';
 import { CommentLikeComponent } from './comment-like/comment-like.component';
-import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 
-export const firebaseConfig = {
-  apiKey: masterFirebaseConfig.apiKey,
-  authDomain: masterFirebaseConfig.authDomain,
-  databaseURL: masterFirebaseConfig.databaseURL,
-  storageBucket: masterFirebaseConfig.storageBucket
-};
+// export const firebaseConfig = {
+//   apiKey: masterFirebaseConfig.apiKey,
+//   authDomain: masterFirebaseConfig.authDomain,
+//   databaseURL: masterFirebaseConfig.databaseURL,
+//   storageBucket: masterFirebaseConfig.storageBucket
+// };
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ export const firebaseConfig = {
     StoryFeedComponent,
     PhotolioComponent,
     CommentLikeComponent,
-    EditProfileComponent,
+    EditPostComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,8 +40,8 @@ export const firebaseConfig = {
     FormsModule,
     HttpModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    // AngularFireModule.initializeApp(firebaseConfig),
+    // AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

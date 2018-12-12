@@ -1,51 +1,27 @@
-# CAPSTONE 
+# Funding
 
-#### A blog website that involves UX and UI with stylish designs
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
-#### By **Mark Mangahas**
+## Development server
 
-## Description
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-A website that allows the users to comment, view and browse through the blog website. Also this can give other web devs to gain ideas on how to style and design their websites.  
+## Code scaffolding
 
-### Project Structure
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-![Screenshot](Capstone.jpg)
- 
+## Build
 
-## Setup/Installation Requirements
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-1. Clone this repository.
-2. Run `npm install` in the terminal.
-3. Run `npm start run` in the terminal.
-4. Check 'https://localhost:8080'
+## Running unit tests
 
-## Notes
-  If there are bugs within the my codes, please let me know. 
-  Thanks in advance! ;)
-  
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Known Bugs
-* None at the moment
+## Running end-to-end tests
 
-## Technologies Used
-* React
-* HTML
-* CSS
-* Bootstrap
-* JavaScript
-* React Router
-* Styled JSX
-* Node
-* Webpack
-* ESLint
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Support and Contact Details
+## Further help
 
-_Email mo.mangahas@gmail.com._
-
-### License
-
-*MIT*
-
-Copyright (c) 2018 **_Mark Mangahas_**
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

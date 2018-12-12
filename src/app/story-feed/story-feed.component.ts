@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './story-feed.component.html',
   styleUrls: ['./story-feed.component.css']
 })
-export class StoryFeedComponent implements OnInit {
+export class StoryFeedComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+currentTime = new Date();
+month: number = this.currentTime.getMonth() + 1;
+day: number = this.currentTime.getDate();
+year: number = this.currentTime.getFullYear();
 
 }

@@ -3,69 +3,93 @@
 
   <!-- The Grid -->
   <div class="w3-row-padding">
-  
+
     <!-- Left Column -->
     <div class="w3-third">
-    
+
       <div class="w3-white w3-text-grey w3-card-4">
         <div class="w3-display-container">
-          <img src=".././assets/img/avatarTest.png" style="width:100%">
+          <img src=".././assets/img/avatar.jpg" style="width:100%">
           <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2>INSERT NAME HERE</h2>
+            <h2 class="w3-text-orange w3">Markeezy</h2>
           </div>
         </div>
         <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>INSERT CAREER HERE</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>INSERT LOCATION HERE</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>INSERT EMAIL HERE</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>INSERT NUMBER HERE</p>
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Web Developer</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Seattle, WA</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>mo.mangahas@yahoo.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>253-431-8922</p>
           <hr>
           <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Biography</b></p>
-          <p>About Me:</p>     
-           <textarea type="text" style="width: 100%;"></textarea>
+          <p>About Me:</p>
+          <textarea type="text" [(ngModel)]="myBio" style="width: 100%;">Hello, {{myBio}}</textarea>
           <hr>
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue"></i>Skills</b></p>
-          <p>INSERT SKILLS HERE</p>
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue"></i>Skills</b></p>
+          <p>Hard Skills</p>
+          <ul class="w3-text-black" style="list-style: circle">
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>Angular</li>
+            <li>React/Redux</li>
+          </ul>
+          <hr>
+          <p>Soft Skills</p>
+          <ul class="w3-text-black" style="list-style: square">
+            <li>Time management and excellent multi-tasking skill</li>
+            <li>Experienced in handling customer’s problems and issues</li>
+            <li>Quick problem-solving techniques and debugging</li>
+            <li>Love designing and open-minded for creativity</li>
+            <li>Commitment and strong motivation to finish projects</li>
+          </ul>
+          <hr>
+          <p class="w3-large"><b><i class="fas fa-language w3-margin-right w3-text-black"></i>Languages</b></p>
           <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+            <div class="w3-container w3-center w3-round-xlarge w3-red w3-text-yellow" style="width:100%">Tagalog and English</div>
           </div>
           <br>
         </div>
-      </div><br>
+      </div>
+      <br>
 
-    <!-- End Left Column -->
+      <!-- End Left Column -->
     </div>
 
     <!-- Right Column -->
     <div class="w3-twothird">
-    
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>Work Experience</h2>
-       <!--  -->
+      <div class="w3-container w3-card w3-light-grey w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-red"></i>
+          Work Experience</h2>
+        <!--  -->
         <div class="w3-container">
-          <input class="w3-opacity w3-text-orange" placeholder="INSERT JOB HISTORY HERE"><h5><b>{{}}</b></h5>
-          <input class="w3-text-black" placeholder="INSERT DATE HERE"><i class="fa fa-calendar fa-fw w3-margin-right"></i><h6>{{}}</h6>
-          <input type="text" placeholder="INSERT DESCRIPTION"><h6>{{}}</h6>
+          <h5 class="w3-opacity w3-text-orange"><b>Passenger Service Agent</b></h5>
+          <h6 class="w3-text-black"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+            July 2017 - September 2018</h6>
+            <hr>
+          <h6>Excellent customer service and problem solving.
+            Supervise baggage handling operations and organize each
+            Outgoing baggage cans. <br>
+            Manage ramp operation to ensure aircraft security and smooth
+            transition of operation procedure. <br>
+            Brief traveler’s access of overseas transportation and security
+            with legal documents and approval. <br>
+            Access database with confidential records of passengers and modify them accordingly.
+          </h6> <br>
+          <!-- <input type="text" placeholder="INSERT DESCRIPTION"> -->
+        </div>
+      </div>
+<!--  -->
+      <div class="w3-container w3-card w3-light-grey">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-yellow"></i>
+        </h2>
+        <h2>EDUCATION</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>insert model here</b></h5>
+          <input type="text" class="w3-text-teal" placeholder="DATE"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+          <h6>{{DATE}}</h6>
           <hr>
         </div>
-       
-      </div>
 
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-yellow"></i><h2>EDUCATION</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity" ><b>{{}}</b></h5>
-          <input type="text" class="w3-text-teal" placeholder="DATE"><i class="fa fa-calendar fa-fw w3-margin-right"></i><h6>{{DATE}}</h6>
-          <hr>
-        </div>
       </div>
-
-    <!-- End Right Column -->
     </div>
-    
-  <!-- End Grid -->
   </div>
-  
-  <!-- End Page Container -->
 </div>
- 
