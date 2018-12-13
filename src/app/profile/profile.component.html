@@ -1,5 +1,6 @@
+
 <!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="w3-content" style="width: 100%; margin-top: 80px;">
 
   <!-- The Grid -->
   <div class="w3-row-padding">
@@ -11,7 +12,7 @@
         <div class="w3-display-container">
           <img src=".././assets/img/avatar.jpg" style="width:100%">
           <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2 class="w3-text-orange w3">Markeezy</h2>
+            <h2 class="w3-text-orange">Markeezy</h2>
           </div>
         </div>
         <div class="w3-container">
@@ -22,7 +23,8 @@
           <hr>
           <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Biography</b></p>
           <p>About Me:</p>
-          <textarea type="text" [(ngModel)]="myBio" style="width: 100%;">Hello, {{myBio}}</textarea>
+          <p>Hello, {{myBio}}</p>
+          <textarea type="text" [(ngModel)]="myBio" style="width: 100%;"></textarea>
           <hr>
           <p class="w3-large w3-text-theme"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue"></i>Skills</b></p>
           <p>Hard Skills</p>
