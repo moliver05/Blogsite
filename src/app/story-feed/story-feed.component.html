@@ -5,7 +5,7 @@
     <!-- Left Column -->
     <div class="w3-col m3">
       <!-- Profile -->
-      <div class="w3-card w3-round w3-black">
+      <div class="w3-card w3-round w3-pale-blue">
         <div class="w3-container">
          <h4 class="w3-center w3-text-orange"><b>Markeezy</b></h4>
          <p class="w3-center"><img src=".././assets/img/avatar.jpg" class="w3-circle" style="height:200px;width:200px" alt="Avatar"></p>
@@ -18,15 +18,15 @@
       <br>
       <br>
       <!-- Interests --> 
-      <div class="w3-card w3-round w3-black">
+      <div class="w3-card w3-round w3-pale-blue">
         <div class="w3-container"> <br>
           <p class="w3-text-pink w3-medium"><b>Interests</b></p>
           <hr>
           <p>
             <span class="w3-medium ">
-                <i class="fas fa-utensils w3-text-brown w3-margin-right"></i><b class="w3-text-white ">Food</b>  <br>
-                <i class="fas fa-plane w3-text-yellow w3-margin-right"></i><b class="w3-text-white">Travel</b>  <br>
-                <i class="fas fa-dog w3-text-orange w3-margin-right"></i><b class="w3-text-white">Dogs</b> <br>
+                <i class="fas fa-utensils w3-text-brown w3-margin-right"></i><b class="w3-text-black ">Food</b>  <br>
+                <i class="fas fa-plane w3-text-yellow w3-margin-right"></i><b class="w3-text-black">Travel</b>  <br>
+                <i class="fas fa-dog w3-text-orange w3-margin-right"></i><b class="w3-text-black">Dogs</b> <br>
                 <i class="fas fa-music w3-margin-right w3-text-blue"></i><b>Music</b> <br>
                 <i class="fas fa-laptop w3-margin-right"></i><b class="w3-text-whitey"> Coding</b></span>
           </p>
@@ -38,10 +38,10 @@
         <!-- Accordion -->
         <div class="w3-card w3-medium w3-center">
           <div class="w3-content">
-            <button style="width: 100%" onclick="myFunction('Demo1')" class="w3-theme-l1 w3-center-align w3-tag w3-text-green"><i class="fa fa-users fa-fw"></i> My Links</button>
+            <button style="width: 100%" onclick="myFunction('Demo1')" class="w3-theme-l1 w3-center-align w3-pale-blue w3-text-green"><i class="fa fa-users fa-fw"></i> My Links</button>
             <div id="Demo1" class="w3-hide w3-container">
               <br>
-              <a href="https://github.com/moliver05"><i class="fab fa-github w3-text-black w3-margin-right "></i><b class="w3-text-black">GITHUB</b></a> <hr>
+              <a href="https://github.com/moliver05"><i class="fab fa-github w3-text-black w3-margin-right"></i><b class="w3-text-black">GITHUB</b></a> <hr>
               <a href="https://www.linkedin.com/in/markmangahas/"><i class="fab fa-linkedin w3-text-white w3-margin-right"></i><b class="w3-text-white">LINKED IN</b></a> <hr>
               <a href="https://www.facebook.com/profile.php?id=100028068129999"><i class="fab fa-facebook w3-text-blue w3-margin-right "></i><b class="w3-text-blue">FACEBOOK</b></a>
             </div>
@@ -56,7 +56,7 @@
     <div class="w3-col m7">
       <div class="w3-row-padding">
         <div class="w3-col m12">
-          <div class="w3-card w3-round w3-white">
+          <div class="w3-card w3-round w3-sand">
             <div class="w3-container w3-padding">
               <input type="text" class="w3-border w3-padding"><p>INPUT POSTS HERE</p>
               <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i> POST EVENT EMIT HERE</button> 
@@ -64,23 +64,13 @@
           </div>
         </div>
       </div>
-      
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-        <span class="w3-right w3-opacity">{{month}}/{{day}}/{{year}}</span>
-        <h4>{{NAME }}</h4><br>
-        <hr class="w3-clear">
-        <p>{{COMMENT}}</p>
-          <div class="w3-row-padding" style="margin:0 -16px">
-        </div>
+      <br> 
 
-        <!-- EVENT EMIT -->
-        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div>
-      
-    <!-- End Middle Column -->
+      <app-comment-like></app-comment-like>
+      <!-- End Middle Column -->
     </div>
+    
+
     
     <!-- EVENTS -->
     <div class="w3-col m2">
