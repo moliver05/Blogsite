@@ -13,6 +13,7 @@ import { StoryFeedComponent } from './story-feed/story-feed.component';
 import { PhotolioComponent } from './photolio/photolio.component';
 import { CommentLikeComponent } from './comment-like/comment-like.component';
 import { CommentDetailComponent } from './comment-detail/comment-detail.component';
+import { EventComponent } from './event/event.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -28,7 +29,8 @@ export const firebaseConfig = {
     StoryFeedComponent,
     PhotolioComponent,
     CommentLikeComponent,
-    CommentDetailComponent
+    CommentDetailComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
