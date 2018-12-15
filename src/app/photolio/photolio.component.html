@@ -1,3 +1,143 @@
-<p>
-  photolio works!
-</p>
+<div class="w3-main w3-content w3-container" style="max-width:1600px;margin-top:83px">
+  <!-- Photo grid -->
+  <a href="#page1"></a>
+  <div class="w3-row">
+    <div class="w3-quarter  w3-hover-grayscale">
+      <img
+        src=".././assets/img/pic1.jpg"
+        style="width:100%"
+        onclick="onClick(this)"
+        alt="test"
+      />
+      <img
+        src=".././assets/img/pic2.jpg"
+        style="width:100%"
+        onclick="onClick(this)"
+        alt=""
+      />
+      <img
+        src=".././assets/img/pic3.jpg"
+        style="width:100%"
+        onclick="onClick(this)"
+        alt=""
+      />
+    </div>
+
+    <div class="w3-quarter  w3-hover-grayscale">
+      <img
+        src=".././assets/img/pic4.jpg"
+        style="width:100%"
+        onclick="onClick(this)"
+        alt=""
+      />
+      <img
+        src=".././assets/img/pic5.jpg"
+        style="width:100%"
+        onclick="onClick(this)"
+        alt=""
+      />
+      <img
+        src=".././assets/img/pic6.jpg"
+        style="width:100%"
+        onclick="onClick(this)"
+        alt=""
+      />
+    </div>
+
+    <div class="w3-quarter  w3-hover-grayscale">
+        <img
+          src=".././assets/img/pic7.jpg"
+          style="width:100%"
+          onclick="onClick(this)"
+          alt="test"
+        />
+        <img
+          src=".././assets/img/pic8.jpg"
+          style="width:100%"
+          onclick="onClick(this)"
+          alt=""
+        />
+        <img
+          src=".././assets/img/pic9.jpg"
+          style="width:100%"
+          onclick="onClick(this)"
+          alt=""
+        />
+      </div>
+      
+      <div class="w3-quarter  w3-hover-grayscale">
+        <img
+          src=".././assets/img/pic10.jpg"
+          style="width:100%"
+          onclick="onClick(this)"
+          alt=""
+        />
+        <img
+          src=".././assets/img/pic11.jpg"
+          style="width:100%"
+          onclick="onClick(this)"
+          alt=""
+        />
+        <img
+          src=".././assets/img/pic13.jpg"
+          style="width:100%"
+          onclick="onClick(this)"
+          alt=""
+        />
+      </div>
+
+      <!-- <div class="w3-quarter  w3-hover-grayscale">
+          <img
+            src=".././assets/img/pic12.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            alt=""
+          />
+          <img
+            src=".././assets/img/pic16.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            alt=""
+          />
+          <img
+            src=".././assets/img/pic17.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            alt=""
+          />
+        </div> -->
+  </div>
+
+  <!-- Pagination --> 
+    <!-- <div class="w3-center w3-padding-32">
+      <div class="w3-bar">
+        <a href="#page1" class="w3-bar-item w3-black w3-button">1</a>
+        <a href="#page2" class="w3-bar-item w3-button w3-hover-black">2</a>
+      </div>
+    </div> -->
+ 
+
+  <!-- Modal for full size images on click -->
+  <div
+    id="modal01"
+    class="w3-modal w3-black"
+    style="padding-top:0"
+    onclick="this.style.display='none'"
+  >
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">X</span>
+    <div
+      class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+    >
+      <img id="img01" class="w3-image" />
+      <p id="caption"></p>
+    </div>
+  </div>
+</div>
+
+<style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .w3-quarter img{margin-bottom: -6px; cursor: pointer}
+    .w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+    .w3-third img{margin-bottom: -6px; cursor: pointer}
+    .w3-third img:hover{opacity: 0.6; transition: 0.3s}
+</style>

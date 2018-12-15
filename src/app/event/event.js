@@ -1,4 +1,4 @@
-export class Event {
+export class EventList {
     constructor() {
         this.urlbase = "https://app.ticketmaster.com/discovery/v2/";
     }
