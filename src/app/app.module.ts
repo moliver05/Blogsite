@@ -11,10 +11,11 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { StoryFeedComponent } from './story-feed/story-feed.component';
 import { PhotolioComponent } from './photolio/photolio.component';
-import { CommentLikeComponent } from './comment-like/comment-like.component';
+import { CommentComponent } from './comment/comment.component';
 import { CommentDetailComponent } from './comment-detail/comment-detail.component';
 import { EventComponent } from './event/event.component';
 import { PostComponent } from './post/post.component';
+import { EditCommentComponent } from './edit-comment/edit-comment.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,10 +30,11 @@ export const firebaseConfig = {
     ProfileComponent,
     StoryFeedComponent,
     PhotolioComponent,
-    CommentLikeComponent,
+    CommentComponent,
     CommentDetailComponent,
     EventComponent,
-    PostComponent
+    PostComponent,
+    EditCommentComponent
   ],
   imports: [
     BrowserModule,

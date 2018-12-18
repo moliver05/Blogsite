@@ -1,4 +1,8 @@
 <div class="w3-card ">
   <h3>{{(postToDisplay | async)?.name}}</h3>
+  <hr>
   <p>{{(postToDisplay | async)?.description}}</p>
+  <button class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up" aria-hidden="true"></i>  Like</button>
+  <button class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-down" aria-hidden="true"></i>  Dislike</button> 
+  <button (click)="addComment" type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
 </div>
