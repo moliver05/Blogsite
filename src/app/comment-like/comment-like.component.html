@@ -1,10 +1,10 @@
 <div class="w3-container w3-card w3-sand w3-round w3-margin"><br>
   <img src="" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
   <span class="w3-right w3-opacity">{{month}}/{{day}}/{{year}}</span>
-  <h4>{{NAME }}</h4><br>
-  <hr class="w3-clear">
-  <p>{{COMMENT}}</p>
+  <h4>Name:<input #newName></h4>
+  <h4>Comment:<input #newComment></h4>
     <div class="w3-row-padding" style="margin:0 -16px">
+  <button (click)="submitForm(newName.value, newComment.value); newName.value=''; newComment.value=''; ">Post</button>
   </div>
 
   <!-- EVENT EMIT -->

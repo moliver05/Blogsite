@@ -6,29 +6,31 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 @Injectable()
 export class PostService {
   posts: FirebaseListObservable<any[]>;
-
   constructor(private database: AngularFireDatabase) {
     this.posts = database.list('posts');
   }
-  
+
+  getPost() {
+    return this.posts;
+  }
+
   addPost(newPost: Post) {
     this.posts.push(newPost);
   }
 
-  getPostbyId(personId: string) {
-    return this.database.object('persons/' + personId);
+  getPostbyId(postId: string) {
+    return this.database.object('posts/' + postId);
   }
-  
 
   updatePost(localUpdatedPost) {
-    var postEntryInFirebase = this.getPostbyId(localUpdatedPost.$key);
+    const postEntryInFirebase = this.getPostbyId(localUpdatedPost.$key);
     postEntryInFirebase.update({
       name: localUpdatedPost.name,
       description: localUpdatedPost.description
     });
   }
-  deleteAlbum(localAlbumToDelete) {
-    var albumEntryInFirebase = this.getPostbyId(localAlbumToDelete.$key);
-    albumEntryInFirebase.remove();
+  deletePost(localPostToDelete) {
+    const postEntryInFirebase = this.getPostbyId(localPostToDelete.$key);
+    postEntryInFirebase.remove();
   }
 }

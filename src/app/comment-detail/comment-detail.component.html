@@ -1,3 +1,4 @@
-<p>
-  comment-detail works!
-</p>
+<div class="w3-card ">
+  <h3>{{(postToDisplay | async)?.name}}</h3>
+  <p>{{(postToDisplay | async)?.description}}</p>
+</div>

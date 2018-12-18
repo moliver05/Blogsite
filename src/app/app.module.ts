@@ -14,6 +14,7 @@ import { PhotolioComponent } from './photolio/photolio.component';
 import { CommentLikeComponent } from './comment-like/comment-like.component';
 import { CommentDetailComponent } from './comment-detail/comment-detail.component';
 import { EventComponent } from './event/event.component';
+import { PostComponent } from './post/post.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,7 +31,8 @@ export const firebaseConfig = {
     PhotolioComponent,
     CommentLikeComponent,
     CommentDetailComponent,
-    EventComponent
+    EventComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
