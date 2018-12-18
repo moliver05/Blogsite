@@ -4,7 +4,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
- 
 const appRoutes: Routes = [
     {
         path: '',

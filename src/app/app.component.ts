@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-// import { AngularFireDatabase } from 'angularfire2/database';
-// import { Observable } from 'rxjs';
+import { AngularFireDatabase } from 'angularfire2/database';
+// tslint:disable-next-line:import-blacklist
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blogsite';
-  // comments: Observable<any[]>;
-  // posts: Observable<any[]>;
-  // constructor(db: AngularFireDatabase) {
-  //   this.comments = db.list('comments');
-  //   this.posts = db.list('posts');
-    
+  comments: Observable<any[]>;
+  posts: Observable<any[]>;
+  constructor(db: AngularFireDatabase) {
+    this.posts = db.list('posts');
   }
+}

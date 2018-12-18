@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Post } from './../models/post.model';
 import { PostService } from './../services/post.service';
 import { FirebaseListObservable } from 'angularfire2/database';
@@ -12,19 +12,14 @@ import { Router } from '@angular/router';
 
 })
 
-
 export class PostComponent implements OnInit {
+  @Output() clickPost = new EventEmitter();
   posts: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-
-
   constructor(private router: Router, private postService: PostService) { }
+
 
   ngOnInit() {
     this.posts = this.postService.getPost();
-  }
-
-  goToDetailPage(clickedPost) {
-    this.router.navigate(['posts', clickedPost.$key]);
   }
 }

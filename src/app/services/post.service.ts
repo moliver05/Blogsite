@@ -25,7 +25,6 @@ export class PostService {
   updatePost(localUpdatedPost) {
     const postEntryInFirebase = this.getPostbyId(localUpdatedPost.$key);
     postEntryInFirebase.update({
-      name: localUpdatedPost.name,
       description: localUpdatedPost.description
     });
   }
