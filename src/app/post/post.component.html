@@ -4,10 +4,9 @@
       <h2> Blog# {{currentPost.count}}</h2>
       <div class="panel panel-default">
         <h2>{{currentPost.description}}</h2>
-        <br> <h3>Feeling -- {{currentPost.feeling}} </h3>
+        <hr> <h3>Feeling -- {{currentPost.feeling}} </h3>
       </div>
     </div>
  </div>
+ <app-edit-post [selectedPost]="currentPost" (clickedDone)="editPost($event)"></app-edit-post>
 </div>
-
-<app-edit-post [selectedPost]="currentPost" (clickedDone)="editPost($event)"></app-edit-post>

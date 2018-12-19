@@ -25,7 +25,9 @@ export class PostService {
   updatePost(localUpdatedPost) {
     const postEntryInFirebase = this.getPostbyId(localUpdatedPost.$key);
     postEntryInFirebase.update({
-      description: localUpdatedPost.description
+      count: localUpdatedPost.count,
+      description: localUpdatedPost.description,
+      feeling: localUpdatedPost.feeling
     });
   }
   deletePost(localPostToDelete) {

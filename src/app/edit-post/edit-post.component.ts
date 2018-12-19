@@ -16,19 +16,19 @@ export class EditPostComponent {
 
   constructor(private postservice: PostService) { }
 
-  beginUpdatingPost(postToUpdate) {
-    this.postservice.updatePost(postToUpdate);
+  beginUpdatingPost(selectedPost) {
+    this.postservice.updatePost(selectedPost);
   }
-  beginDeletingPost(postToDelete) {
+  beginDeletingPost(selectedPost) {
     if (confirm('Confirm')) {
-      this.postservice.deletePost(postToDelete);
+      this.postservice.deletePost(selectedPost);
     }
   }
   startEdit() {
     this.editing = true;
   }
 
-  finishedEditing( )  {
+  finishedEditing()  {
     this.clickedDone.emit(this.selectedPost);
     this.editing = false;
   }

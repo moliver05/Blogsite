@@ -5,13 +5,13 @@
     <div class="w3-container w3-padding">
       <h2>Edit Current Post</h2>
       <div class="panel panel-primary">
-        <label>New Blog#</label><input [(ngModel)]="currentPost.count">
+        <label>New Blog#</label><input [(ngModel)]="selectedPost.count">
         <br>
-        <label>New Description</label><input [(ngModel)]="currentPost.description">
+        <label>New Description</label><input [(ngModel)]="selectedPost.description">
         <br>
-        <label>New Feeling</label><input [(ngModel)]="currentPost.feeling">
+        <label>New Feeling</label><input [(ngModel)]="selectedPost.feeling">
       </div>
-      <button (click)="finishedEditing()">Done!</button>
+      <button (click)="finishedEditing(selectedPost)">Done!</button>
     </div>
     <button class="btn btn-success" (click)="beginUpdatingPost(selectedPost)"> Update</button>
     <button class="btn btn-danger" (click)="beginDeletingPost(selectedPost)"> Delete</button>

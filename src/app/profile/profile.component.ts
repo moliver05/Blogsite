@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent {
 
-  viewProfile =  null;
+  // viewProfile =  null;
 
-    editProfile(clickedProf) {
-      this.viewProfile = clickedProf;
-    }
+  //   editProfile(clickedProf) {
+  //     this.viewProfile = clickedProf;
+  //   }
 
-    finishEdit() {
-    this.viewProfile = null;
-    }
+  //   finishEdit() {
+  //   this.viewProfile = null;
+  //   }
 }

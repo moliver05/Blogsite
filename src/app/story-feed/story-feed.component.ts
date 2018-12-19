@@ -1,6 +1,7 @@
+import { PostComponent } from './../post/post.component';
 import { PostService } from './../services/post.service';
 import { Post } from './../models/post.model';
-import { Component} from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { Component} from '@angular/core';
   providers: [PostService]
 })
 export class StoryFeedComponent {
-selectedPost: Post;
+  @Output() clickPost = new EventEmitter();
+  selectedPost = null;
 constructor(private postService: PostService) {}
 
 // tslint:disable-next-line:no-shadowed-variable
@@ -19,14 +21,11 @@ submitPost(description: string, feeling: string, count: number) {
   this.postService.addPost(newPost);
   }
 
-  editPost(clickPost) {
-    this.selectedPost = clickPost;
-  }
-
-  finishedEditing() {
-    this.selectedPost = null;
+  editPost(postToEdit) {
+    this.clickPost.emit(postToEdit);
   }
 }
+
 
 
 

@@ -95,14 +95,15 @@
           <div class="w3-container w3-padding">
             <h2 class="w3-text-black"><i class="far fa-smile-beam w3-margin-bottom"></i><b>Express Yourself</b></h2>
             <label class="w3-margin-bottom" for="Number">Blog#</label><input class="w3-round" style="height: 30px;" #newCount> <br>
-            <label for="Describe">Describe</label> <input  class="w3-round" style="width: 100%; height: 30px;" #newDescription> <br>
-            <label for="Feeling">Feeling</label> <input  class="w3-round w3-margin-bottom" style="width: 100%; height: 30px;" #newFeeling> <br>
+            <label for="Describe">What's Gucci?</label> <input  class="w3-round" style="width: 100%; height: 30px;" #newDescription> 
+            <label for="Feeling">Any Feelings Involved?</label> <input  class="w3-round w3-margin-bottom" style="width: 100%; height: 30px;" #newFeeling> 
             <button (click)="submitPost(newDescription.value, newFeeling.value, newCount.value); newDescription.value=''; newFeeling.value=''; newCount.value='' "><i class="fa fa-pencil-alt"></i> POST</button> 
           </div>
       </div>
     <br>
     <!--  -->
     <app-post (clickPost)="editPost($event)"></app-post>
+    <!-- <app-edit-post [selectedPost]="posts" (clickedDone)="editPost($event)"></app-edit-post> -->
   </div>
 
     <app-event></app-event>
