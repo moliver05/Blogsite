@@ -88,11 +88,25 @@
 
       <!-- End Left Column -->
     </div>
-    
+
+    <!-- POST SECTION -->
+    <div class="w3-col m6 w3-row w3-margin-bottom w3-margin-right">
+        <div class="w3-card w3-round w3-sand">
+          <div class="w3-container w3-padding">
+            <h2 class="w3-text-black"><i class="far fa-smile-beam w3-margin-bottom"></i><b>Express Yourself</b></h2>
+            <input #newDescription>
+            <input #newFeeling>
+            <button (click)="submitPost(newDescription.value, newFeeling.value); newDescription.value=''; newFeeling.value='' "><i class="fa fa-pencil-alt"></i> POST</button> 
+          </div>
+      </div>
+    <br>
+    <!--  -->
     <app-post></app-post>
+  </div>
     <app-event></app-event>
     <!-- End Page Container -->
   </div>
+
   <br />
   <!-- Footer -->
   <footer class="w3-container w3-theme-d3 w3-padding-16">

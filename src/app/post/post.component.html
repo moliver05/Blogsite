@@ -1,20 +1,13 @@
-
-<div class="w3-col m6 w3-row w3-margin-bottom w3-margin-right">
-      <div class="w3-card w3-round w3-sand">
-        <div class="w3-container w3-padding">
-          <h2 class="w3-text-black"><i class="far fa-smile-beam w3-margin-bottom"></i><b>Express Yourself</b></h2>
-          <input #newPost style="width: 100%;" type="text" class="w3-border w3-padding w3-large">
-          <button class="w3-button" (click)="submitPost(newPost.value); newPost.value='';"><i class="fa fa-pencil-alt"></i> POST</button> 
-        </div>
-  </div>
-<br>
-<br>
-    <div class="w3-card w3-round w3-sand">
-      <div class="w3-container w3-padding">
-        <h2> My Posts</h2>
-        <div class="panel panel-default">
-          <h2>{{ newPost.description }}</h2>
-        </div>
+<div *ngFor="let post of posts | async">
+<div class="">
+<div class="w3-row w3-card w3-round w3-sand">
+    <div class="w3-container w3-padding">
+      <h2> My Posts</h2>
+      <div class="panel panel-default">
+        <h2>{{post.description}}</h2>
+        <br> <h3>Feeling -- {{post.feeling}} </h3>
       </div>
     </div>
+    </div>
   </div>
+</div>

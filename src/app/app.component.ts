@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   title = 'blogsite';
-  comments: Observable<any[]>;
   posts: Observable<any[]>;
   constructor(db: AngularFireDatabase) {
     this.posts = db.list('posts');
