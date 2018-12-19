@@ -1,13 +1,13 @@
-<div *ngFor="let post of posts | async">
-<div class="">
-<div class="w3-row w3-card w3-round w3-sand">
+<div *ngFor="let currentPost of posts | async">
+<div class="w3-row w3-card w3-round w3-light-grey w3-margin-top">
     <div class="w3-container w3-padding">
-      <h2> My Posts</h2>
+      <h2> Blog# {{currentPost.count}}</h2>
       <div class="panel panel-default">
-        <h2>{{post.description}}</h2>
-        <br> <h3>Feeling -- {{post.feeling}} </h3>
+        <h2>{{currentPost.description}}</h2>
+        <br> <h3>Feeling -- {{currentPost.feeling}} </h3>
       </div>
     </div>
-    </div>
-  </div>
+ </div>
 </div>
+
+<app-edit-post [selectedPost]="currentPost" (clickedDone)="editPost($event)"></app-edit-post>

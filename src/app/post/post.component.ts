@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output} from '@angular/core';
 import { Post } from './../models/post.model';
 import { PostService } from './../services/post.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-post',
@@ -15,10 +16,16 @@ import { Router } from '@angular/router';
 export class PostComponent implements OnInit {
   posts: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  @Output() clickPost = new EventEmitter();
+  selectedPost = null;
 
   constructor(private router: Router, private postService: PostService) { }
 
   ngOnInit() {
     this.posts = this.postService.getPost();
+  }
+
+ editBeer(postToEdit) {
+    this.clickPost.emit(postToEdit);
   }
 }

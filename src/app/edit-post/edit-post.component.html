@@ -1,3 +1,19 @@
-<p>
-  edit-post works!
-</p>
+<button class="btn btn-secondary" (click)="startEdit()"> Edit </button>
+<br>
+<div *ngIf="editing">
+  <div class="w3-row w3-card w3-round w3-light-grey w3-margin-top">
+    <div class="w3-container w3-padding">
+      <h2>Edit Current Post</h2>
+      <div class="panel panel-primary">
+        <label>New Blog#</label><input [(ngModel)]="currentPost.count">
+        <br>
+        <label>New Description</label><input [(ngModel)]="currentPost.description">
+        <br>
+        <label>New Feeling</label><input [(ngModel)]="currentPost.feeling">
+      </div>
+      <button (click)="finishedEditing()">Done!</button>
+    </div>
+    <button class="btn btn-success" (click)="beginUpdatingPost(selectedPost)"> Update</button>
+    <button class="btn btn-danger" (click)="beginDeletingPost(selectedPost)"> Delete</button>
+  </div>
+</div>
