@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 export class PostComponent implements OnInit {
   posts: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-  // selectedPost = null;
+  selectedPost = null;
 
   constructor(private router: Router, private postService: PostService) { }
 
@@ -25,13 +25,8 @@ export class PostComponent implements OnInit {
     this.posts = this.postService.getPost();
   }
 
-
-  // editPost(clickPost) {
-  //   this.selectedPost = clickPost;
-  // }
-
-  // finishedEditing() {
-  //   this.selectedPost = null;
-  // }
+  editPost(clickPost) {
+    this.selectedPost = clickPost;
+  }
 }
 
