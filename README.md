@@ -18,7 +18,7 @@ A website that allows the users to comment, view and browse through the blog web
 1. Clone this repository.
 2. Run `npm install` in the terminal.
 3. Run `ng serve` in the terminal.
-4. Check 'https://localhost:8080'
+4. Check 'https://localhost:4020'
 
 ## Notes
   If there are bugs within the my codes, please let me know. 
