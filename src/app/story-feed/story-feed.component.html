@@ -65,7 +65,7 @@
           >
             <i class="fa fa-users fa-fw"></i> My Links
           </button>
-          <div id="Demo1" class="w3-hide w3-container">
+          <div id="Demo1" class="w3-hide w3-container w3-pale-blue">
             <br />
             <a href="https://github.com/moliver05"
               ><i class="fab fa-github w3-text-black w3-margin-right"></i
@@ -73,8 +73,8 @@
             >
             <hr />
             <a href="https://www.linkedin.com/in/markmangahas/"
-              ><i class="fab fa-linkedin w3-text-white w3-margin-right"></i
-              ><b class="w3-text-white">LINKED IN</b></a
+              ><i class="fab fa-linkedin w3-text-grey w3-margin-right"></i
+              ><b class="w3-text-grey">LINKED IN</b></a
             >
             <hr />
             <a href="https://www.facebook.com/profile.php?id=100028068129999"
@@ -94,16 +94,16 @@
         <div class="w3-card w3-round w3-sand">
           <div class="w3-container w3-padding">
             <h2 class="w3-text-black"><i class="far fa-smile-beam w3-margin-bottom"></i><b>Express Yourself</b></h2>
-            <label class="w3-margin-bottom" for="Number">Blog#</label><input class="w3-round" style="height: 30px;" #newCount> <br>
-            <label for="Describe">What's Gucci?</label> <input  class="w3-round" style="width: 100%; height: 30px;" #newDescription> 
-            <label for="Feeling">Any Feelings Involved?</label> <input  class="w3-round w3-margin-bottom" style="width: 100%; height: 30px;" #newFeeling> 
+            <label class="w3-margin-bottom w3-margin-right" for="Number">Blog#</label><input class="w3-round" style="height: 25px;" #newCount> <br>
+            <label for="Describe">What's Gucci?</label> <textarea  class="w3-round" style="width: 100%; height: 100px;" #newDescription></textarea>
+            <label for="Feeling">Any Feelings Involved?</label> <textarea  class="w3-round w3-margin-bottom" style="width: 100%; height: 25px;" #newFeeling> </textarea>
             <button (click)="submitPost(newDescription.value, newFeeling.value, newCount.value); newDescription.value=''; newFeeling.value=''; newCount.value='' "><i class="fa fa-pencil-alt"></i> POST</button> 
           </div>
       </div>
     <br>
     <!--  -->
     <app-post (clickPost)="editPost($event)"></app-post>
-    <!-- <app-edit-post [selectedPost]="posts" (clickedDone)="editPost($event)"></app-edit-post> -->
+    
   </div>
 
     <app-event></app-event>
@@ -118,9 +118,9 @@
 
   <footer class="w3-container w3-theme-d5">
     <p>
-      Powered by
+      Made with
       <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
-        >w3.css</a
+      >Angular | W3-CSS</a
       >
     </p>
   </footer>

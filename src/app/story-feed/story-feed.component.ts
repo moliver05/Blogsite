@@ -15,7 +15,6 @@ export class StoryFeedComponent {
   selectedPost = null;
 constructor(private postService: PostService) {}
 
-// tslint:disable-next-line:no-shadowed-variable
 submitPost(description: string, feeling: string, count: number) {
   const newPost: Post = new Post(description, feeling, count);
   this.postService.addPost(newPost);

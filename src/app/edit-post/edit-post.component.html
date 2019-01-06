@@ -1,17 +1,17 @@
-<button class="btn btn-secondary" (click)="startEdit()"> Edit </button>
+<button class="btn btn-info" (click)="startEdit()"><i class="fas fa-cog "></i></button>
 <br>
 <div *ngIf="editing">
-  <div class="w3-row w3-card w3-round w3-light-grey w3-margin-top">
-    <div class="w3-container w3-padding">
+  <div class="w3-round w3-light-grey w3-margin-top" style="width: 100%;">
+    <div class="w3-container">
       <h2>Edit Current Post</h2>
       <div class="panel panel-primary">
-        <label>New Blog#</label><input [(ngModel)]="selectedPost.count">
+        <label>New Blog#</label><input [(ngModel)]="selectedPost.idCount">
         <br>
         <label>New Description</label><input [(ngModel)]="selectedPost.description">
         <br>
         <label>New Feeling</label><input [(ngModel)]="selectedPost.feeling">
       </div>
-      <button (click)="finishedEditing(selectedPost)">Done!</button>
+      <button class="btn btn-primary" (click)="finishedEditing(selectedPost)"> Done</button>
     </div>
     <button class="btn btn-success" (click)="beginUpdatingPost(selectedPost)"> Update</button>
     <button class="btn btn-danger" (click)="beginDeletingPost(selectedPost)"> Delete</button>

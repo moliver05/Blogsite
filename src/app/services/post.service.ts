@@ -8,6 +8,7 @@ export class PostService {
   posts: FirebaseListObservable<any[]>;
   constructor(private database: AngularFireDatabase) {
     this.posts = database.list('posts');
+    // likes = database.list['likes'];
   }
 
   getPost() {
@@ -25,13 +26,17 @@ export class PostService {
   updatePost(localUpdatedPost) {
     const postEntryInFirebase = this.getPostbyId(localUpdatedPost.$key);
     postEntryInFirebase.update({
-      count: localUpdatedPost.count,
+      idCount: localUpdatedPost.idCount,
       description: localUpdatedPost.description,
-      feeling: localUpdatedPost.feeling
+      feeling: localUpdatedPost.feeling,
     });
   }
   deletePost(localPostToDelete) {
     const postEntryInFirebase = this.getPostbyId(localPostToDelete.$key);
     postEntryInFirebase.remove();
   }
+
+  // addLikes(localLiketoAdd) {
+
+  // }
 }
