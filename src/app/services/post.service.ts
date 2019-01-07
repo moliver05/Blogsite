@@ -35,8 +35,4 @@ export class PostService {
     const postEntryInFirebase = this.getPostbyId(localPostToDelete.$key);
     postEntryInFirebase.remove();
   }
-
-  // addLikes(localLiketoAdd) {
-
-  // }
 }
