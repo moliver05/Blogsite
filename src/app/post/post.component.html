@@ -1,6 +1,6 @@
 <div *ngFor="let currentPost of (posts | async)">
   <div class="w3-row-padding w3-card w3-border w3-sand w3-animate-zoom w3-margin-top">
-    <span class="w3-left w3-margin-bottom">
+    <span class="w3-left">
       <app-edit-post
         [selectedPost]="currentPost"
         (clickedDone)="editPost($event)"

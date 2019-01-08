@@ -1,16 +1,21 @@
-<button onclick="document.getElementById('id01').style.display='block'" (click)="startEdit()" class="w3-button w3-medium w3-theme w3-hover-teal"><i class="fas fa-cog"></i></button>
+<button onclick="document.getElementById('id01').style.display='block'" (click)="startEdit()" class="w3-medium w3-hover-red"><i class="fas fa-cog"></i></button>
 <div class="w3-main w3-container w3-modal" id="id01">
-  <br>
   <div *ngIf="editing" class="w3-modal-content w3-card-4 w3-animate-top">
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright">X</span>
-      <div class="w3-round w3-light-grey w3-margin-top" style="height: 250px; font-size: 20px;">
-      <h2>Edit Current Post</h2>
-      <div class="panel panel-primary w3-padding">
-        <label>New Blog#</label><input [(ngModel)]="selectedPost.idCount" />
-        <br />
-        <label>New Description</label
-        ><input [(ngModel)]="selectedPost.description" /> <br />
-        <label>New Feeling</label><input [(ngModel)]="selectedPost.feeling" />
+      <span onclick="document.getElementById('id01').style.display='none'"
+      class="w3-button w3-small w3-grey w3-display-topright">X</span>
+      <div class="w3-round w3-light-grey" style="height: 250px; font-size: 20px; margin-top: 100px;">
+      <h1 class="w3-block w3-text-black w3-teal"><b>Edit Current Post</b></h1>
+      <div class="panel panel-primary w3-padding w3-margin-top">
+        <label>New Blog# </label>
+        <input [(ngModel)]="selectedPost.idCount" />
+        <hr>
+        <label>New Description</label>
+        <br>
+        <textarea  style="width: 100%" [(ngModel)]="selectedPost.description"></textarea> 
+        <br>
+        <label>New Feeling</label>
+        <br>
+        <textarea  style="width: 100%" [(ngModel)]="selectedPost.feeling"></textarea>
       <hr>
       <button class="btn btn-primary" (click)="finishedEditing(selectedPost)">
         Done
