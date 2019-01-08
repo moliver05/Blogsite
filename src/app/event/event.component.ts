@@ -11,7 +11,7 @@ import { TicketMasterApi } from '../services/ticketmaster.service';
   providers: [TicketMasterApi]
 })
 export class EventComponent {
-  data: any = {};
+  data: any = [];
   constructor(private ticketMaster: TicketMasterApi) {}
   getResults(city: string) {
     this.ticketMaster.getbyCity(city).subscribe(response => {
