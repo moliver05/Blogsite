@@ -1,17 +1,28 @@
-<button class="btn btn-info" (click)="startEdit()"><i class="fas fa-cog "></i></button>
-<br>
-<div *ngIf="editing" style="width: 100%;">
-  <div class="w3-round w3-light-grey w3-margin-top">
+
+<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-medium w3-theme w3-hover-teal" ><i class="fas fa-cog"></i></button>
+<div class="w3-main w3-container w3-modal" id="id01">
+  <button class="btn btn-info" (click)="startEdit()">Edit</button>
+  <br />
+  <div *ngIf="editing" class="w3-modal-content w3-card-4 w3-animate-top">
+    <div class="w3-round w3-light-grey w3-margin-top">
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
       <h2>Edit Current Post</h2>
       <div class="panel panel-primary">
-        <label>New Blog#</label><input [(ngModel)]="selectedPost.idCount">
-        <br>
-        <label>New Description</label><input [(ngModel)]="selectedPost.description">
-        <br>
-        <label>New Feeling</label><input [(ngModel)]="selectedPost.feeling">
+        <label>New Blog#</label><input [(ngModel)]="selectedPost.idCount" />
+        <br />
+        <label>New Description</label
+        ><input [(ngModel)]="selectedPost.description" /> <br />
+        <label>New Feeling</label><input [(ngModel)]="selectedPost.feeling" />
       </div>
-      <button class="btn btn-primary" (click)="finishedEditing(selectedPost)"> Done</button>
-    <button class="btn btn-success" (click)="beginUpdatingPost(selectedPost)"> Update</button>
-    <button class="btn btn-danger" (click)="beginDeletingPost(selectedPost)"> Delete</button>
+      <button class="btn btn-primary" (click)="finishedEditing(selectedPost)">
+        Done
+      </button>
+      <button class="btn btn-success" (click)="beginUpdatingPost(selectedPost)">
+        Update
+      </button>
+      <button class="btn btn-danger" (click)="beginDeletingPost(selectedPost)">
+        Delete
+      </button>
+    </div>
   </div>
 </div>

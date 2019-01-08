@@ -20,10 +20,12 @@
         <button (click)="getResults(eventCity.value)">Get Results</button>
       </form>
       <hr />
+
       <div *ngIf="data">
         <app-event-list [childDatas]="data"></app-event-list>
       </div>
       <div *ngIf="data === null"><h3>No Search Found.</h3></div>
+      
     </div>
   </div>
 </div>
