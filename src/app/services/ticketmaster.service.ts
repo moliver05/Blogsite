@@ -10,6 +10,6 @@ export class TicketMasterApi {
 
 getCityEvent(keyword: string, city: string) {
     // tslint:disable-next-line:max-line-length
-    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events.json?keyword=${keyword}&city=${city}&&apikey=uwC2fceKfAhcBxGIzBUXk1kZvK9QPFrJ`);
+    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events.json?keyword=${keyword}&city=${city}&&apikey=${process.env.tm_api}`);
     }
 }
