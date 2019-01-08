@@ -1,15 +1,29 @@
 <div class="w3-col m2">
   <div class="w3-card w3-round w3-khaki w3-center">
     <div class="w3-container">
-      <p style="text-decoration-line: underline;" class="w3-text-red w3-medium w3-margin-top">Events in Seattle:</p>
-      <form id='searchForm'>
+      <p
+        style="text-decoration-line: underline;"
+        class="w3-text-red w3-medium w3-margin-top"
+      >
+        Look Up Events:
+      </p>
+      <form>
         <div class="form-group">
           <label for="city">Search by City</label>
-          <input class="form-control" name="city" id="city" type="text" required>
+          <input id="city" type="text" required #eventCity />
         </div>
-        <button class="btn btn-danger">Search</button>
+        <hr />
+        <!-- <div class="form-group">
+          <label for="city">Search by Kind</label>
+          <input id="events" type="text" required #eventKind>
+        </div> -->
+        <button (click)="getResults(eventCity.value)">Get Results</button>
       </form>
-      <hr>
-      <span id="displayEvent" class="w3-block w3-theme-l4"><b>Infos:</b></span>
+      <hr />
+      <div *ngIf="data">
+        <app-event-list [childDatas]="data"></app-event-list>
+      </div>
+      <div *ngIf="data === null"><h3>No Search Found.</h3></div>
     </div>
   </div>
+</div>

@@ -15,6 +15,7 @@ import { EventComponent } from './event/event.component';
 import { PostComponent } from './post/post.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
 import { AdminComponent } from './admin/admin.component';
+import { EventListComponent } from './event-list/event-list.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,9 +31,10 @@ export const firebaseConfig = {
     StoryFeedComponent,
     PhotolioComponent,
     EventComponent,
+    EventListComponent,
     PostComponent,
     EditPostComponent,
-    AdminComponent
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

@@ -39,5 +39,7 @@ testem.log
 Thumbs.db
 
 #Firebase credentials
-/src/app/api-keys.ts
-.env
+/src/app/api_keys.ts
+
+#Package
+package-lock.json

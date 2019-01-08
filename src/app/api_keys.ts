@@ -6,3 +6,5 @@ export const masterFirebaseConfig = {
   storageBucket: 'capstone-angular.appspot.com',
   messagingSenderId: '1003695569137'
 };
+
+export const apikey = 'uwC2fceKfAhcBxGIzBUXk1kZvK9QPFrJ';

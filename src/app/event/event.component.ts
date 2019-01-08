@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { TicketMasterApi } from '../services/ticketmaster.service';
+
+
 
 @Component({
   selector: 'app-event',
@@ -9,10 +11,12 @@ import { TicketMasterApi } from '../services/ticketmaster.service';
   providers: [TicketMasterApi]
 })
 export class EventComponent {
-  data: any[] = null;
-  constructor(private ticketMaster: TicketMasterApi) { }
-  getCityEvent(keyword: string, city: string) {
-    this.ticketMaster.getCityEvent(keyword, city).subscribe(response => {
+  data: any = {};
+  noData = false;
+  constructor(private ticketMaster: TicketMasterApi) {}
+  getResults(city: string) {
+    this.data =  null;
+    this.ticketMaster.getbyCity(city).subscribe(response => {
         this.data = response.json();
     });
   }
