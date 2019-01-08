@@ -7,35 +7,9 @@
           <label for="city">Search by City</label>
           <input class="form-control" name="city" id="city" type="text" required>
         </div>
-        <button type="submit" class="btn btn-danger">Search</button>
+        <button class="btn btn-danger">Search</button>
       </form>
+      <hr>
       <span id="displayEvent" class="w3-block w3-theme-l4"><b>Infos:</b></span>
     </div>
   </div>
-  <div class='showErrors'></div>
-</div>
-
-<script>
-$(document).ready(function () {
-    $('#searchForm').submit(function(event) {
-        event.preventDefault();
-        let searchCity = $('#city').val();
-        let allEvents = new Event();
-        let promise = allEvents.getEventByCity(searchCity);
-    
-        promise.then(function (response) {
-            let body = JSON.parse(response);
-            console.log(body);
-            
-            $('#displayEvent').text(`Events in ${searchCity}:`);
-            for (let i = 0; i < body._embedded.events.length; i++) {
-                $('#displayEvent').append(`<br>${body._embedded.events[i].name}`);
-                $('#displayEvent').append(`--- Date: ${body._embedded.events[i].dates.start.localDate}`);
-            }
-        }, function (error) {
-            $('.showErrors').text(`There was an error processing your request: ${error.message}`);
-    
-        });
-    });
-});
-</script>
